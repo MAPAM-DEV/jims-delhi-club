@@ -39,7 +39,6 @@ export const siteConfig = {
     ],
     more: [
       { label: "About Us", section: "atmosphere" },
-      { label: "Catering", section: "catering" },
     ],
   },
   

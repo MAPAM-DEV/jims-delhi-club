@@ -1,6 +1,5 @@
 import { ExternalLink } from "lucide-react";
 import interiorImg from "@/assets/interior.png";
-import storefrontImg from "@/assets/storefront.png";
 import { siteConfig } from "@/config/site";
 
 const AtmosphereSection = () => (
@@ -15,12 +14,9 @@ const AtmosphereSection = () => (
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
+      <div className="max-w-xl mx-auto">
         <div className="overflow-hidden border-[3px] border-white">
           <img src={interiorImg} alt={`Inside ${siteConfig.name}`} className="w-full h-64 md:h-80 object-cover img-industrial hover:scale-105 transition-transform duration-700" />
-        </div>
-        <div className="overflow-hidden border-[3px] border-white">
-          <img src={storefrontImg} alt={`${siteConfig.name} storefront`} className="w-full h-64 md:h-80 object-cover img-industrial hover:scale-105 transition-transform duration-700" />
         </div>
       </div>
 
