@@ -8,17 +8,27 @@ export const siteConfig = {
   
   // Location
   address: "72 Albert St, Dundee DD4 6QH",
-  hours: "Mon–Sat: 8am–5pm · Sun: 10am–4pm",
+  hours: [
+    { day: "Tuesday", time: "Closed" },
+    { day: "Wednesday", time: "4–8 pm" },
+    { day: "Thursday", time: "4–8 pm" },
+    { day: "Friday", time: "12–6 pm" },
+    { day: "Saturday", time: "12–4 pm" },
+    { day: "Sunday", time: "Closed" },
+    { day: "Monday", time: "Closed" },
+  ],
   coordinates: {
-    lat: 56.4651,
-    lng: -2.9640,
+    lat: 56.46475,
+    lng: -2.96855,
   },
   
   // Social & links
   links: {
     instagram: "https://www.instagram.com/jims_delhi_club/",
-    tiktok: "https://www.tiktok.com/discover/jims-delhi-dundee",
-    googleMaps: "https://www.google.com/maps/search/72+Albert+St,+Dundee+DD4+6QH",
+    instagramApp: "instagram://user?username=jims_delhi_club",
+    tiktok: "https://www.tiktok.com/@jimsdelhi",
+    tiktokApp: "tiktok://user?username=jimsdelhi",
+    googleMaps: "https://www.google.com/maps/search/?api=1&query=72+Albert+St,+Dundee+DD4+6QH",
     appleMaps: "https://maps.apple.com/?address=72%20Albert%20St,%20Dundee%20DD4%206QH",
   },
   
