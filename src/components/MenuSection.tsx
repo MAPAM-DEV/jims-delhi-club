@@ -21,7 +21,7 @@ const MenuSection = () => {
         </div>
 
         <div className="text-center mb-8">
-          <span className="inline-block bg-white/20 border-[3px] border-orange text-white px-6 py-2 text-sm uppercase tracking-[0.15em] font-medium">
+          <span className="inline-block bg-white/20 border-[3px] border-white outline outline-[3px] outline-offset-2 outline-orange text-white px-6 py-2 text-sm uppercase tracking-[0.15em] font-medium">
             {siteConfig.currentMenu.month}
           </span>
         </div>
@@ -29,7 +29,7 @@ const MenuSection = () => {
         <div className="max-w-2xl mx-auto">
           <button
             onClick={() => setLightboxOpen(true)}
-            className="w-full border-[3px] border-white outline outline-[3px] outline-offset-4 outline-orange bg-white/10 p-6 md:p-8 cursor-pointer hover:bg-white/20 transition-colors group"
+            className="w-full border-[3px] border-white outline outline-[3px] outline-offset-2 outline-orange bg-white/10 p-6 md:p-8 cursor-pointer hover:bg-white/20 transition-colors group"
           >
             <img
               src={menuJanuary}
