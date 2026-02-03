@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { siteConfig } from "@/config/site";
+import { TikTokIcon } from "./Footer";
 
 const customIcon = L.icon({
   iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
@@ -62,7 +63,7 @@ const LocationSection = () => {
           <p className="text-sm text-muted-foreground">{siteConfig.hours}</p>
         </div>
 
-        <div className="flex items-center justify-center gap-6 mb-12">
+        <div className="flex items-center justify-center gap-4 mb-12">
           <a
             href={siteConfig.links.instagram}
             target="_blank"
@@ -71,6 +72,15 @@ const LocationSection = () => {
             aria-label="Instagram"
           >
             <Instagram className="w-5 h-5" strokeWidth={1.5} />
+          </a>
+          <a
+            href={siteConfig.links.tiktok}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 border-2 border-foreground/40 hover:bg-foreground hover:text-background transition-all duration-300"
+            aria-label="TikTok"
+          >
+            <TikTokIcon className="w-5 h-5" />
           </a>
         </div>
 
