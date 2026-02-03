@@ -1,6 +1,6 @@
 import { Instagram } from "lucide-react";
 import { siteConfig } from "@/config/site";
-import { TikTokIcon } from "./Footer";
+import TikTokIcon from "./icons/TikTokIcon";
 
 const Navbar = () => {
   const scrollToSection = (id: string) => {
