@@ -54,6 +54,9 @@ export default {
           light: "hsl(var(--surface-light))",
           "light-foreground": "hsl(var(--surface-light-foreground))",
         },
+        orange: {
+          DEFAULT: "hsl(var(--accent-orange))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",

@@ -1,11 +1,13 @@
 import { ExternalLink } from "lucide-react";
 import interiorImg from "@/assets/interior.png";
 import { siteConfig } from "@/config/site";
+import DecorativeDivider from "./DecorativeDivider";
 
 const AtmosphereSection = () => (
   <section id="atmosphere" className="section-light py-24 md:py-32 relative overflow-hidden">
     <div className="container mx-auto px-6 relative z-10">
       <div className="text-center mb-16">
+        <DecorativeDivider className="mb-6" />
         <h2 className="heading-section text-white mb-8">About Us</h2>
         <p className="body-regular text-white/70 max-w-lg mx-auto">
           Serving quality coffee and fresh deli food from a beautifully restored 
@@ -15,7 +17,7 @@ const AtmosphereSection = () => (
       </div>
 
       <div className="max-w-xl mx-auto">
-        <div className="overflow-hidden border-[3px] border-white">
+        <div className="overflow-hidden border-[3px] border-white outline outline-2 outline-offset-4 outline-orange">
           <img src={interiorImg} alt={`Inside ${siteConfig.name}`} className="w-full h-64 md:h-80 object-cover img-industrial hover:scale-105 transition-transform duration-700" />
         </div>
       </div>

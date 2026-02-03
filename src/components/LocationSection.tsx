@@ -4,6 +4,7 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { siteConfig } from "@/config/site";
 import { TikTokIcon } from "./Footer";
+import DecorativeDivider from "./DecorativeDivider";
 
 const customIcon = L.icon({
   iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
@@ -50,6 +51,7 @@ const LocationSection = () => {
     <section id="location" className="section-dark py-24 md:py-32 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-12">
+          <DecorativeDivider className="mb-6" />
           <p className="label-small text-muted-foreground mb-4">Visit</p>
           <h2 className="heading-section">Find Us</h2>
         </div>
@@ -68,7 +70,7 @@ const LocationSection = () => {
             href={siteConfig.links.instagram}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 border-2 border-foreground/40 hover:bg-foreground hover:text-background transition-all duration-300"
+            className="p-3 border-2 border-orange hover:bg-orange hover:text-background transition-all duration-300"
             aria-label="Instagram"
           >
             <Instagram className="w-5 h-5" strokeWidth={1.5} />
@@ -77,7 +79,7 @@ const LocationSection = () => {
             href={siteConfig.links.tiktok}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 border-2 border-foreground/40 hover:bg-foreground hover:text-background transition-all duration-300"
+            className="p-3 border-2 border-orange hover:bg-orange hover:text-background transition-all duration-300"
             aria-label="TikTok"
           >
             <TikTokIcon className="w-5 h-5" />
@@ -95,7 +97,7 @@ const LocationSection = () => {
           </a>
         </div>
 
-        <div className="max-w-4xl mx-auto border-2 border-foreground/40">
+        <div className="max-w-4xl mx-auto border-2 border-foreground/40 outline outline-2 outline-offset-4 outline-orange">
           <div ref={mapContainerRef} className="h-[400px] md:h-[500px] w-full" aria-label={`Map showing ${siteConfig.name} location`} />
         </div>
       </div>

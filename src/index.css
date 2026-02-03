@@ -43,6 +43,9 @@
     --surface-light: 77 25% 38%;
     --surface-light-foreground: 0 0% 100%;
     --divider: 0 0% 80%;
+    
+    /* Accent orange */
+    --accent-orange: 39 90% 48%;
   }
 
   .light-section {
