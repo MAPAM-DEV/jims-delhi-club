@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { siteConfig } from "@/config/site";
-import { TikTokIcon } from "./Footer";
+import TikTokIcon from "./icons/TikTokIcon";
 import DecorativeDivider from "./DecorativeDivider";
 
 const customIcon = L.icon({
