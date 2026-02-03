@@ -19,7 +19,7 @@ const Hero = () => {
       
       <div className="text-center max-w-4xl mx-auto z-10">
         <h1 className="heading-hero mb-4 animate-fade-in">{siteConfig.name}</h1>
-        <p className="body-large text-muted-foreground animate-fade-in" style={{ animationDelay: "0.1s" }}>
+        <p className="body-large text-white animate-fade-in" style={{ animationDelay: "0.1s" }}>
           {siteConfig.tagline}
         </p>
       </div>
