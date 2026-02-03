@@ -1,5 +1,5 @@
 import { ChevronDown } from "lucide-react";
-import FloatingCoffees from "./FloatingCoffees";
+import heroCover from "@/assets/hero-cover.png";
 
 const Hero = () => {
   const scrollToLocation = () => {
@@ -14,7 +14,15 @@ const Hero = () => {
       id="hero"
       className="min-h-screen flex flex-col items-center justify-center section-dark px-6 pt-20 relative overflow-hidden"
     >
-      <FloatingCoffees />
+      {/* Cover Image */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src={heroCover} 
+          alt="Loom Deli interior with barista" 
+          className="w-full h-full object-cover opacity-40"
+        />
+      </div>
+      
       <div className="text-center max-w-4xl mx-auto z-10">
         {/* Main Title */}
         <h1 className="heading-hero mb-4 animate-fade-in">LOOM DELI</h1>
