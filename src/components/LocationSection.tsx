@@ -70,34 +70,34 @@ const LocationSection = () => {
             href={siteConfig.links.instagram}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 border-[3px] border-orange hover:bg-orange hover:text-background transition-all duration-300"
+            className="p-4 border-[3px] border-white outline outline-[3px] outline-offset-2 outline-orange hover:bg-white hover:text-background transition-all duration-300"
             aria-label="Instagram"
           >
-            <Instagram className="w-5 h-5" strokeWidth={1.5} />
+            <Instagram className="w-6 h-6" strokeWidth={1.5} />
           </a>
           <a
             href={siteConfig.links.tiktok}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 border-[3px] border-orange hover:bg-orange hover:text-background transition-all duration-300"
+            className="p-4 border-[3px] border-white outline outline-[3px] outline-offset-2 outline-orange hover:bg-white hover:text-background transition-all duration-300"
             aria-label="TikTok"
           >
-            <TikTokIcon className="w-5 h-5" />
+            <TikTokIcon className="w-6 h-6" />
           </a>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-          <a href={siteConfig.links.googleMaps} target="_blank" rel="noopener noreferrer" className="btn-outline inline-flex items-center gap-2">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
+          <a href={siteConfig.links.googleMaps} target="_blank" rel="noopener noreferrer" className="px-6 py-3 border-[3px] border-white outline outline-[3px] outline-offset-2 outline-orange bg-transparent transition-all duration-300 hover:bg-white hover:text-background text-sm uppercase tracking-[0.15em] font-medium inline-flex items-center gap-2">
             <ExternalLink className="w-4 h-4" />
             Open in Google Maps
           </a>
-          <a href={siteConfig.links.appleMaps} target="_blank" rel="noopener noreferrer" className="btn-outline inline-flex items-center gap-2">
+          <a href={siteConfig.links.appleMaps} target="_blank" rel="noopener noreferrer" className="px-6 py-3 border-[3px] border-white outline outline-[3px] outline-offset-2 outline-orange bg-transparent transition-all duration-300 hover:bg-white hover:text-background text-sm uppercase tracking-[0.15em] font-medium inline-flex items-center gap-2">
             <ExternalLink className="w-4 h-4" />
             Open in Apple Maps
           </a>
         </div>
 
-        <div className="max-w-4xl mx-auto border-[3px] border-foreground/40 outline outline-[3px] outline-offset-4 outline-orange">
+        <div className="max-w-4xl mx-auto border-[3px] border-white outline outline-[3px] outline-offset-2 outline-orange">
           <div ref={mapContainerRef} className="h-[400px] md:h-[500px] w-full" aria-label={`Map showing ${siteConfig.name} location`} />
         </div>
       </div>

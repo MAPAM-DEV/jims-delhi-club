@@ -17,16 +17,16 @@ const AtmosphereSection = () => (
       </div>
 
       <div className="max-w-xl mx-auto">
-        <div className="overflow-hidden border-[3px] border-white outline outline-[3px] outline-offset-4 outline-orange">
+        <div className="overflow-hidden border-[3px] border-white outline outline-[3px] outline-offset-2 outline-orange">
           <img src={interiorImg} alt={`Inside ${siteConfig.name}`} className="w-full h-64 md:h-80 object-cover img-industrial hover:scale-105 transition-transform duration-700" />
         </div>
       </div>
 
       <div className="mt-16 max-w-2xl mx-auto text-center">
         <p className="label-small text-white/70 mb-6">What People Write About Us</p>
-        <div className="flex flex-col gap-3 max-w-lg mx-auto">
+        <div className="flex flex-col gap-4 max-w-lg mx-auto">
           {siteConfig.pressArticles.map((article) => (
-            <div key={article.url} className="flex items-center justify-between px-4 py-3 border-2 border-white/30 bg-white/5">
+            <div key={article.url} className="flex items-center justify-between px-4 py-3 border-[3px] border-white outline outline-[3px] outline-offset-2 outline-orange bg-white/5">
               <span className="text-white text-sm">
                 <span className="font-semibold">{article.platform}:</span> {article.title}
               </span>
@@ -34,7 +34,7 @@ const AtmosphereSection = () => (
                 href={article.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 border-2 border-white text-white hover:bg-white hover:text-background transition-colors flex-shrink-0 ml-3"
+                className="p-3 border-[3px] border-white outline outline-[3px] outline-offset-2 outline-orange text-white hover:bg-white hover:text-background transition-colors flex-shrink-0 ml-3"
               >
                 <ExternalLink className="w-4 h-4" strokeWidth={2} />
               </a>
