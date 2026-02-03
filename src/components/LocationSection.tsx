@@ -39,7 +39,7 @@ const LocationSection = () => {
 
     L.marker([lat, lng], { icon: customIcon })
       .addTo(map)
-      .bindPopup(`<div style="text-align:center;padding:8px 10px;"><strong style="display:block;margin-bottom:4px;letter-spacing:0.06em;">${siteConfig.name}</strong><span style="font-size:12px;opacity:0.85;">${siteConfig.description}</span></div>`);
+      .bindPopup(`<div style="text-align:center;padding:8px 10px;"><strong style="letter-spacing:0.06em;">${siteConfig.name}</strong></div>`);
 
     return () => {
       map.remove();
