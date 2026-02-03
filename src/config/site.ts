@@ -2,8 +2,8 @@
 
 export const siteConfig = {
   // Business info
-  name: "JIM'S DELHI CLUB",
-  tagline: "Craft coffee, fresh eats & good vibes",
+  name: "jim's delhi club",
+  tagline: "your local sandwich dealer",
   description: "Coffee & Deli",
   
   // Location
