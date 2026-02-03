@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Loom Deli Design System - Industrial Café Aesthetic */
+
+@layer base {
+  :root {
+    /* Core palette - Black with orange accents */
+    --background: 0 0% 4%;
+    --foreground: 24 74% 56%;
+    
+    --card: 0 0% 7%;
+    --card-foreground: 24 74% 56%;
+    
+    --popover: 0 0% 7%;
+    --popover-foreground: 24 74% 56%;
+    
+    --primary: 24 74% 56%;
+    --primary-foreground: 0 0% 4%;
+    
+    --secondary: 0 0% 14%;
+    --secondary-foreground: 24 74% 56%;
+    
+    --muted: 0 0% 14%;
+    --muted-foreground: 24 74% 45%;
+    
+    --accent: 24 74% 56%;
+    --accent-foreground: 0 0% 4%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 24 74% 35%;
+    --input: 24 74% 35%;
+    --ring: 24 74% 56%;
+    
+    --radius: 0px;
+    
+    /* Custom tokens */
+    --surface-light: 24 74% 56%;
+    --surface-light-foreground: 0 0% 98%;
+    --divider: 0 0% 25%;
+  }
+
+  .light-section {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 4%;
+    --card: 0 0% 96%;
+    --card-foreground: 0 0% 4%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 40%;
+    --border: 0 0% 85%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased font-bold;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+@layer components {
+  /* Industrial typography - all bold */
+  .heading-hero {
+    @apply text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-none;
+  }
+
+  .heading-section {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight;
+  }
+
+  .heading-subsection {
+    @apply text-xl md:text-2xl font-bold tracking-tight;
+  }
+
+  .body-large {
+    @apply text-lg md:text-xl font-bold tracking-wide leading-relaxed;
+  }
+
+  .body-regular {
+    @apply text-base font-bold tracking-wide leading-relaxed;
+  }
+
+  .label-small {
+    @apply text-xs uppercase tracking-[0.2em] font-bold;
+  }
+
+  /* Industrial button styles */
+  .btn-outline {
+    @apply px-6 py-3 border border-current bg-transparent 
+           transition-all duration-300 ease-out
+           hover:bg-foreground hover:text-background
+           text-sm uppercase tracking-[0.15em] font-medium;
+  }
+
+  .btn-outline-inverse {
+    @apply px-6 py-3 border border-current bg-transparent 
+           transition-all duration-300 ease-out
+           hover:bg-background hover:text-foreground
+           text-sm uppercase tracking-[0.15em] font-medium;
+  }
+
+  .btn-solid {
+    @apply px-6 py-3 bg-foreground text-background
+           transition-all duration-300 ease-out
+           hover:bg-muted-foreground
+           text-sm uppercase tracking-[0.15em] font-medium;
+  }
+
+  /* Section utilities */
+  .section-dark {
+    @apply bg-background text-foreground;
+  }
+
+  .section-light {
+    @apply bg-[hsl(var(--surface-light))] text-[hsl(var(--surface-light-foreground))];
+  }
+
+  /* Divider line */
+  .divider-line {
+    @apply h-px bg-border w-full;
+  }
+
+  /* Link hover effect */
+  .link-hover {
+    @apply relative after:absolute after:bottom-0 after:left-0 after:h-px 
+           after:w-0 after:bg-current after:transition-all after:duration-300
+           hover:after:w-full;
+  }
+
+  /* Social icon styling */
+  .social-icon {
+    @apply w-5 h-5 transition-opacity duration-300 hover:opacity-60;
+  }
+
+  /* Industrial card */
+  .industrial-card {
+    @apply border border-border bg-card p-6 md:p-8;
+  }
+
+  /* Image container with grayscale */
+  .img-industrial {
+    @apply grayscale-[30%] contrast-[1.1] brightness-[0.95];
+  }
+}
+
+/* Leaflet map overrides for industrial style */
+.leaflet-container {
+  background: hsl(0 0% 7%) !important;
+  font-family: 'Space Grotesk', sans-serif !important;
+}
+
+.leaflet-popup-content-wrapper {
+  background: hsl(0 0% 4%) !important;
+  color: hsl(0 0% 98%) !important;
+  border-radius: 0 !important;
+  border: 1px solid hsl(0 0% 25%) !important;
+}
+
+.leaflet-popup-tip {
+  background: hsl(0 0% 4%) !important;
+}
+
+.leaflet-popup-close-button {
+  color: hsl(0 0% 98%) !important;
+}
+
+/* Grayscale map tiles */
+.leaflet-tile {
+  filter: grayscale(100%) contrast(1.1) brightness(0.9);
+}
