@@ -8,27 +8,27 @@
 
 @layer base {
   :root {
-    /* Core palette - Black with orange accents */
-    --background: 0 0% 4%;
+    /* Core palette - Olive green with orange accents */
+    --background: 77 25% 48%;
     --foreground: 24 74% 56%;
     
-    --card: 0 0% 7%;
+    --card: 77 25% 42%;
     --card-foreground: 24 74% 56%;
     
-    --popover: 0 0% 7%;
+    --popover: 77 25% 42%;
     --popover-foreground: 24 74% 56%;
     
     --primary: 24 74% 56%;
-    --primary-foreground: 0 0% 4%;
+    --primary-foreground: 77 25% 48%;
     
-    --secondary: 0 0% 14%;
+    --secondary: 77 25% 38%;
     --secondary-foreground: 24 74% 56%;
     
-    --muted: 0 0% 14%;
+    --muted: 77 25% 38%;
     --muted-foreground: 24 74% 45%;
     
     --accent: 24 74% 56%;
-    --accent-foreground: 0 0% 4%;
+    --accent-foreground: 77 25% 48%;
     
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
@@ -42,16 +42,16 @@
     /* Custom tokens */
     --surface-light: 24 74% 56%;
     --surface-light-foreground: 0 0% 98%;
-    --divider: 0 0% 25%;
+    --divider: 77 25% 35%;
   }
 
   .light-section {
     --background: 0 0% 100%;
-    --foreground: 0 0% 4%;
+    --foreground: 0 0% 100%;
     --card: 0 0% 96%;
-    --card-foreground: 0 0% 4%;
+    --card-foreground: 0 0% 100%;
     --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 40%;
+    --muted-foreground: 0 0% 90%;
     --border: 0 0% 85%;
   }
 }
@@ -158,19 +158,19 @@
 
 /* Leaflet map overrides for industrial style */
 .leaflet-container {
-  background: hsl(0 0% 7%) !important;
+  background: hsl(77 25% 42%) !important;
   font-family: 'Space Grotesk', sans-serif !important;
 }
 
 .leaflet-popup-content-wrapper {
-  background: hsl(0 0% 4%) !important;
+  background: hsl(77 25% 48%) !important;
   color: hsl(0 0% 98%) !important;
   border-radius: 0 !important;
-  border: 1px solid hsl(0 0% 25%) !important;
+  border: 1px solid hsl(77 25% 35%) !important;
 }
 
 .leaflet-popup-tip {
-  background: hsl(0 0% 4%) !important;
+  background: hsl(77 25% 48%) !important;
 }
 
 .leaflet-popup-close-button {
