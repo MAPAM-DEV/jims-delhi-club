@@ -10,7 +10,7 @@ const TikTokIcon = ({ className }: { className?: string }) => (
 export { TikTokIcon };
 
 const Footer = () => (
-  <footer className="section-dark border-t border-border py-12">
+  <footer className="section-dark border-t border-orange py-12">
     <div className="container mx-auto px-6">
       <div className="flex flex-col items-center text-center">
         <p className="text-lg font-semibold tracking-[0.2em] mb-6">{siteConfig.name}</p>
