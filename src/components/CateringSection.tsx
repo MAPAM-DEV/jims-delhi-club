@@ -1,6 +1,7 @@
 import cateringImg from "@/assets/catering.png";
 import { Truck, Users, Instagram } from "lucide-react";
 import { siteConfig } from "@/config/site";
+import { TikTokIcon } from "./Footer";
 
 const CateringSection = () => (
   <section id="catering" className="section-dark py-24 md:py-32 relative overflow-hidden">
@@ -31,15 +32,26 @@ const CateringSection = () => (
           </div>
 
           <p className="label-small text-muted-foreground mb-4">Enquire Via</p>
-          <a
-            href={siteConfig.links.instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-outline inline-flex items-center gap-3"
-          >
-            <Instagram className="w-4 h-4" strokeWidth={1.5} />
-            Instagram
-          </a>
+          <div className="flex items-center gap-3">
+            <a
+              href={siteConfig.links.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline inline-flex items-center gap-3"
+            >
+              <Instagram className="w-4 h-4" strokeWidth={1.5} />
+              Instagram
+            </a>
+            <a
+              href={siteConfig.links.tiktok}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline inline-flex items-center gap-3"
+            >
+              <TikTokIcon className="w-4 h-4" />
+              TikTok
+            </a>
+          </div>
         </div>
       </div>
     </div>

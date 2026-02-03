@@ -2,33 +2,34 @@
 
 export const siteConfig = {
   // Business info
-  name: "LOOM DELI",
+  name: "JIM'S DELHI CLUB",
   tagline: "Craft coffee, fresh eats & good vibes",
   description: "Coffee & Deli",
   
   // Location
-  address: "Old Mill Complex, Brown St, Dundee DD1 5EF",
+  address: "72 Albert St, Dundee DD4 6QH",
   hours: "Mon–Sat: 8am–5pm · Sun: 10am–4pm",
   coordinates: {
-    lat: 56.4617134,
-    lng: -2.9798164,
+    lat: 56.4651,
+    lng: -2.9640,
   },
   
   // Social & links
   links: {
     instagram: "https://www.instagram.com/jims_delhi_club/",
-    googleMaps: "https://www.google.com/maps/place/Loom/@56.4617134,-2.9798164,17z/data=!3m1!4b1!4m6!3m5!1s0x48865d00671fa093:0x386339a903adba5b!8m2!3d56.4617134!4d-2.9798164!16s%2Fg%2F11mrds_yqb!5m1!1e4?entry=ttu",
-    appleMaps: "https://maps.apple.com/?address=Dundee,%20Scotland&ll=56.4617134,-2.9798164&q=Loom%20Deli",
+    tiktok: "https://www.tiktok.com/discover/jims-delhi-dundee",
+    googleMaps: "https://www.google.com/maps/search/72+Albert+St,+Dundee+DD4+6QH",
+    appleMaps: "https://maps.apple.com/?address=72%20Albert%20St,%20Dundee%20DD4%206QH",
   },
   
   // Press articles
   pressArticles: [
     {
-      title: "Article 1: First Look at Loom",
+      title: "Article 1: First Look at Jim's Delhi Club",
       url: "https://www.thecourier.co.uk/fp/lifestyle/food-drink/5360542/first-look-at-loom-dundee-cafe/",
     },
     {
-      title: "Article 2: Loom Deli Review", 
+      title: "Article 2: Jim's Delhi Club Review", 
       url: "https://www.thecourier.co.uk/fp/lifestyle/food-drink/5396317/review-loom-deli-dundee/",
     },
   ],

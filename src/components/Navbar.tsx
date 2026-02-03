@@ -1,6 +1,7 @@
 import { Instagram, ChevronDown } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { siteConfig } from "@/config/site";
+import { TikTokIcon } from "./Footer";
 
 const Navbar = () => {
   const [moreOpen, setMoreOpen] = useState(false);
@@ -75,14 +76,24 @@ const Navbar = () => {
             <NavLinks />
           </div>
 
-          <a
-            href={siteConfig.links.instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-          >
-            <Instagram className="social-icon" />
-          </a>
+          <div className="flex items-center gap-3">
+            <a
+              href={siteConfig.links.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <Instagram className="social-icon" />
+            </a>
+            <a
+              href={siteConfig.links.tiktok}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="TikTok"
+            >
+              <TikTokIcon className="social-icon" />
+            </a>
+          </div>
         </div>
 
         <div className="flex md:hidden items-center justify-center gap-6 mt-3 pt-3 border-t border-border">
