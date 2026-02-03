@@ -1,5 +1,5 @@
 import { ExternalLink } from "lucide-react";
-import atmosphereImg from "@/assets/atmosphere.png";
+import interiorImg from "@/assets/interior.png";
 import storefrontImg from "@/assets/storefront.png";
 
 const AtmosphereSection = () => {
@@ -20,8 +20,8 @@ const AtmosphereSection = () => {
         <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
           <div className="overflow-hidden border-[3px] border-black">
             <img
-              src={atmosphereImg}
-              alt="Coffee and sandwich at Loom Deli"
+              src={interiorImg}
+              alt="Inside Loom Deli"
               className="w-full h-64 md:h-80 object-cover img-industrial hover:scale-105 transition-transform duration-700"
             />
           </div>
