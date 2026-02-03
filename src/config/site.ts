@@ -18,8 +18,8 @@ export const siteConfig = {
     { day: "Monday", time: "Closed" },
   ],
   coordinates: {
-    lat: 56.46475,
-    lng: -2.96855,
+    lat: 56.46961393836929,
+    lng: -2.9576973288148767,
   },
   
   // Social & links
