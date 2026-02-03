@@ -1,4 +1,4 @@
-import { Instagram, Facebook } from "lucide-react";
+import { Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -11,20 +11,12 @@ const Footer = () => {
           {/* Social Icons */}
           <div className="flex items-center gap-6 mb-6">
             <a
-              href="https://www.instagram.com/loomdeli/?hl=en"
+              href="https://www.instagram.com/jims_delhi_club/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
             >
               <Instagram className="social-icon" />
-            </a>
-            <a
-              href="https://www.facebook.com/people/Loom-Deli/61583794007733/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-            >
-              <Facebook className="social-icon" />
             </a>
           </div>
 

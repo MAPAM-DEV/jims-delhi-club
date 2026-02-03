@@ -1,5 +1,5 @@
 import cateringImg from "@/assets/catering.png";
-import { Truck, Users, Instagram, Mail } from "lucide-react";
+import { Truck, Users, Instagram } from "lucide-react";
 
 const CateringSection = () => {
   return (
@@ -39,24 +39,15 @@ const CateringSection = () => {
 
             {/* CTA */}
             <p className="label-small text-muted-foreground mb-4">Enquire Via</p>
-            <div className="flex items-center gap-4">
-              <a
-                href="https://www.instagram.com/loomdeli/?hl=en"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-outline inline-flex items-center gap-3"
-              >
-                <Instagram className="w-4 h-4" strokeWidth={1.5} />
-                Instagram
-              </a>
-              <a
-                href="mailto:loomdeli@mail.com"
-                className="btn-outline inline-flex items-center gap-3"
-              >
-                <Mail className="w-4 h-4" strokeWidth={1.5} />
-                Email
-              </a>
-            </div>
+            <a
+              href="https://www.instagram.com/jims_delhi_club/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline inline-flex items-center gap-3"
+            >
+              <Instagram className="w-4 h-4" strokeWidth={1.5} />
+              Instagram
+            </a>
           </div>
         </div>
       </div>
