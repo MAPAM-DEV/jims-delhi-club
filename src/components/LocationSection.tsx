@@ -1,4 +1,4 @@
-import { MapPin, ExternalLink, Instagram, Facebook } from "lucide-react";
+import { MapPin, ExternalLink, Instagram } from "lucide-react";
 import { useEffect, useRef } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
@@ -82,22 +82,13 @@ const LocationSection = () => {
         {/* Social Links */}
         <div className="flex items-center justify-center gap-6 mb-12">
           <a
-            href="https://www.instagram.com/loomdeli/?hl=en"
+            href="https://www.instagram.com/jims_delhi_club/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 border-2 border-foreground/40 hover:bg-foreground hover:text-background transition-all duration-300"
             aria-label="Instagram"
           >
             <Instagram className="w-5 h-5" strokeWidth={1.5} />
-          </a>
-          <a
-            href="https://www.facebook.com/people/Loom-Deli/61583794007733/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 border-2 border-foreground/40 hover:bg-foreground hover:text-background transition-all duration-300"
-            aria-label="Facebook"
-          >
-            <Facebook className="w-5 h-5" strokeWidth={1.5} />
           </a>
         </div>
 

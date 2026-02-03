@@ -1,4 +1,4 @@
-import { Instagram, Facebook, ChevronDown } from "lucide-react";
+import { Instagram, ChevronDown } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 
 const Navbar = () => {
@@ -75,15 +75,9 @@ const Navbar = () => {
                   </button>
                   <button
                     onClick={() => scrollToSection("catering")}
-                    className="w-full text-left px-4 py-3 label-small hover:bg-muted transition-colors border-b border-border"
-                  >
-                    Catering
-                  </button>
-                  <button
-                    onClick={() => scrollToSection("join")}
                     className="w-full text-left px-4 py-3 label-small hover:bg-muted transition-colors"
                   >
-                    Join the Team
+                    Catering
                   </button>
                 </div>
               )}
@@ -93,20 +87,12 @@ const Navbar = () => {
           {/* Social Icons */}
           <div className="flex items-center gap-4">
             <a
-              href="https://www.instagram.com/loomdeli/?hl=en"
+              href="https://www.instagram.com/jims_delhi_club/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
             >
               <Instagram className="social-icon" />
-            </a>
-            <a
-              href="https://www.facebook.com/people/Loom-Deli/61583794007733/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-            >
-              <Facebook className="social-icon" />
             </a>
           </div>
         </div>
@@ -149,15 +135,9 @@ const Navbar = () => {
                 </button>
                 <button
                   onClick={() => scrollToSection("catering")}
-                  className="w-full text-left px-4 py-3 label-small hover:bg-muted transition-colors border-b border-border"
-                >
-                  Catering
-                </button>
-                <button
-                  onClick={() => scrollToSection("join")}
                   className="w-full text-left px-4 py-3 label-small hover:bg-muted transition-colors"
                 >
-                  Join the Team
+                  Catering
                 </button>
               </div>
             )}
