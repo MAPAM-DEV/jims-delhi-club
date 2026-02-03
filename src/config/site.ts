@@ -22,16 +22,13 @@ export const siteConfig = {
     appleMaps: "https://maps.apple.com/?address=72%20Albert%20St,%20Dundee%20DD4%206QH",
   },
   
-  // Press articles
+  // Press & reviews
   pressArticles: [
-    {
-      title: "Article 1: First Look at Jim's Delhi Club",
-      url: "https://www.thecourier.co.uk/fp/lifestyle/food-drink/5360542/first-look-at-loom-dundee-cafe/",
-    },
-    {
-      title: "Article 2: Jim's Delhi Club Review", 
-      url: "https://www.thecourier.co.uk/fp/lifestyle/food-drink/5396317/review-loom-deli-dundee/",
-    },
+    { platform: "The Courier", title: "Jim's Delhi Club", url: "https://www.thecourier.co.uk/fp/lifestyle/food-drink/2767908/jims-delhi-club/" },
+    { platform: "The Courier", title: "Restaurant Review", url: "https://www.thecourier.co.uk/fp/lifestyle/food-drink/3201908/restaurant-review-jims-delhi-club-is-a-food-gem-in-dundees-city-centre/" },
+    { platform: "The Skinny", title: "Jim's Delhi Club", url: "https://www.theskinny.co.uk/whats-on/dundee/restaurants/jims-delhi-club" },
+    { platform: "Stobswell Forum", title: "Meet James", url: "https://www.facebook.com/stobswellforum/posts/meet-jamesowner-of-jims-delhi-club-est-january-2020-during-the-pandemic-as-a-mob/3794830243975023/" },
+    { platform: "Wanderlog", title: "Jim's Delhi Club", url: "https://wanderlog.com/place/details/9821341/jims-delhi-club" },
   ],
   
   // Navigation

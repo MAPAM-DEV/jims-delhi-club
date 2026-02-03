@@ -25,19 +25,18 @@ const AtmosphereSection = () => (
       </div>
 
       <div className="mt-16 max-w-2xl mx-auto text-center">
-        <p className="label-small text-black/70 mb-6">In The Press</p>
-        <p className="body-regular text-black/70 mb-8">
-          We've been featured in The Courier — read what they had to say about us.
-        </p>
-        <div className="flex flex-col gap-3 max-w-md mx-auto">
+        <p className="label-small text-black/70 mb-6">What People Write About Us</p>
+        <div className="flex flex-col gap-3 max-w-lg mx-auto">
           {siteConfig.pressArticles.map((article) => (
             <div key={article.url} className="flex items-center justify-between px-4 py-3 border-2 border-black/30 bg-black/5">
-              <span className="text-black text-sm">{article.title}</span>
+              <span className="text-black text-sm">
+                <span className="font-semibold">{article.platform}:</span> {article.title}
+              </span>
               <a
                 href={article.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 border-2 border-black text-black hover:bg-black hover:text-white transition-colors"
+                className="p-2 border-2 border-black text-black hover:bg-black hover:text-white transition-colors flex-shrink-0 ml-3"
               >
                 <ExternalLink className="w-4 h-4" strokeWidth={2} />
               </a>
