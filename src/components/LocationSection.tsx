@@ -53,7 +53,7 @@ const LocationSection = () => {
         <div className="text-center mb-12">
           <DecorativeDivider className="mb-6" />
           <p className="label-small text-muted-foreground mb-4">Visit</p>
-          <h2 className="heading-section">Find Us</h2>
+          <h2 className="heading-section" style={{ WebkitTextStroke: '2px hsl(39 90% 48%)' }}>Find Us</h2>
         </div>
 
         <div className="flex flex-col items-center text-center mb-8">
@@ -70,7 +70,7 @@ const LocationSection = () => {
             href={siteConfig.links.instagram}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 border-2 border-orange hover:bg-orange hover:text-background transition-all duration-300"
+            className="p-3 border-[3px] border-orange hover:bg-orange hover:text-background transition-all duration-300"
             aria-label="Instagram"
           >
             <Instagram className="w-5 h-5" strokeWidth={1.5} />
@@ -79,7 +79,7 @@ const LocationSection = () => {
             href={siteConfig.links.tiktok}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 border-2 border-orange hover:bg-orange hover:text-background transition-all duration-300"
+            className="p-3 border-[3px] border-orange hover:bg-orange hover:text-background transition-all duration-300"
             aria-label="TikTok"
           >
             <TikTokIcon className="w-5 h-5" />
@@ -97,7 +97,7 @@ const LocationSection = () => {
           </a>
         </div>
 
-        <div className="max-w-4xl mx-auto border-2 border-foreground/40 outline outline-2 outline-offset-4 outline-orange">
+        <div className="max-w-4xl mx-auto border-[3px] border-foreground/40 outline outline-[3px] outline-offset-4 outline-orange">
           <div ref={mapContainerRef} className="h-[400px] md:h-[500px] w-full" aria-label={`Map showing ${siteConfig.name} location`} />
         </div>
       </div>

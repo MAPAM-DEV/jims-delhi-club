@@ -13,7 +13,7 @@ const MenuSection = () => {
         <div className="text-center mb-8">
           <DecorativeDivider className="mb-6" />
           <p className="label-small text-white/70 mb-4">Fresh Every Month</p>
-          <h2 className="heading-section text-white mb-6">The Menu</h2>
+          <h2 className="heading-section text-white mb-6" style={{ WebkitTextStroke: '2px hsl(39 90% 48%)' }}>The Menu</h2>
           <p className="body-regular text-white/80 max-w-xl mx-auto">
             Our menu changes monthly, featuring fresh seasonal ingredients and creative new dishes. 
             Check back each month to see what's cooking!
@@ -21,7 +21,7 @@ const MenuSection = () => {
         </div>
 
         <div className="text-center mb-8">
-          <span className="inline-block bg-white/20 border-2 border-orange text-white px-6 py-2 text-sm uppercase tracking-[0.15em] font-medium">
+          <span className="inline-block bg-white/20 border-[3px] border-orange text-white px-6 py-2 text-sm uppercase tracking-[0.15em] font-medium">
             {siteConfig.currentMenu.month}
           </span>
         </div>
@@ -29,7 +29,7 @@ const MenuSection = () => {
         <div className="max-w-2xl mx-auto">
           <button
             onClick={() => setLightboxOpen(true)}
-            className="w-full border-[3px] border-white outline outline-2 outline-offset-4 outline-orange bg-white/10 p-6 md:p-8 cursor-pointer hover:bg-white/20 transition-colors group"
+            className="w-full border-[3px] border-white outline outline-[3px] outline-offset-4 outline-orange bg-white/10 p-6 md:p-8 cursor-pointer hover:bg-white/20 transition-colors group"
           >
             <img
               src={menuJanuary}

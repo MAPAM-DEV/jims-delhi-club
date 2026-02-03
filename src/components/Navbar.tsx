@@ -13,7 +13,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-orange">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b-[3px] border-orange">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <button
@@ -55,7 +55,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="flex md:hidden items-center justify-center gap-6 mt-3 pt-3 border-t border-orange">
+        <div className="flex md:hidden items-center justify-center gap-6 mt-3 pt-3 border-t-[3px] border-orange">
           {navItems.map((item) => (
             <button
               key={item.section}
