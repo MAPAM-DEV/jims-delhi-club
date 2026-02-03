@@ -8,41 +8,41 @@
 
 @layer base {
   :root {
-    /* Core palette - Olive green with orange accents */
+    /* Core palette - Olive green with white text */
     --background: 77 25% 48%;
-    --foreground: 24 74% 56%;
+    --foreground: 0 0% 100%;
     
     --card: 77 25% 42%;
-    --card-foreground: 24 74% 56%;
+    --card-foreground: 0 0% 100%;
     
     --popover: 77 25% 42%;
-    --popover-foreground: 24 74% 56%;
+    --popover-foreground: 0 0% 100%;
     
-    --primary: 24 74% 56%;
+    --primary: 0 0% 100%;
     --primary-foreground: 77 25% 48%;
     
     --secondary: 77 25% 38%;
-    --secondary-foreground: 24 74% 56%;
+    --secondary-foreground: 0 0% 100%;
     
     --muted: 77 25% 38%;
-    --muted-foreground: 24 74% 45%;
+    --muted-foreground: 0 0% 85%;
     
-    --accent: 24 74% 56%;
+    --accent: 0 0% 100%;
     --accent-foreground: 77 25% 48%;
     
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     
-    --border: 24 74% 35%;
-    --input: 24 74% 35%;
-    --ring: 24 74% 56%;
+    --border: 0 0% 100%;
+    --input: 0 0% 100%;
+    --ring: 0 0% 100%;
     
     --radius: 0px;
     
     /* Custom tokens */
-    --surface-light: 24 74% 56%;
-    --surface-light-foreground: 0 0% 98%;
-    --divider: 77 25% 35%;
+    --surface-light: 77 25% 38%;
+    --surface-light-foreground: 0 0% 100%;
+    --divider: 0 0% 80%;
   }
 
   .light-section {
@@ -75,6 +75,9 @@
   /* Industrial typography - all bold */
   .heading-hero {
     @apply text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-none;
+    -webkit-text-stroke: 2px white;
+    text-stroke: 2px white;
+    paint-order: stroke fill;
   }
 
   .heading-section {
