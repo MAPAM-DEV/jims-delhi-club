@@ -3,9 +3,6 @@ import heroCover from "@/assets/hero-cover.png";
 import { siteConfig } from "@/config/site";
 
 const Hero = () => {
-  const scrollToLocation = () => {
-    document.getElementById("location")?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <section
@@ -16,20 +13,15 @@ const Hero = () => {
         <img 
           src={heroCover} 
           alt={`${siteConfig.name} storefront`}
-          className="w-full h-full object-cover opacity-40"
+          className="w-full h-full object-cover opacity-70"
         />
       </div>
       
       <div className="text-center max-w-4xl mx-auto z-10">
         <h1 className="heading-hero mb-4 animate-fade-in">{siteConfig.name}</h1>
-        <p className="body-large text-muted-foreground mb-8 animate-fade-in" style={{ animationDelay: "0.1s" }}>
+        <p className="body-large text-muted-foreground animate-fade-in" style={{ animationDelay: "0.1s" }}>
           {siteConfig.tagline}
         </p>
-        <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
-          <button onClick={scrollToLocation} className="btn-outline">
-            Now Open — Visit Us
-          </button>
-        </div>
       </div>
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
