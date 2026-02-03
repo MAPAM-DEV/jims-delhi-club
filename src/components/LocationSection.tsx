@@ -61,24 +61,47 @@ const LocationSection = () => {
             <MapPin className="w-5 h-5 text-muted-foreground" strokeWidth={1.5} />
             <span className="body-regular font-medium">{siteConfig.name}</span>
           </div>
-          <p className="body-regular text-muted-foreground mb-3">{siteConfig.address}</p>
-          <p className="text-sm text-muted-foreground">{siteConfig.hours}</p>
+          <p className="body-regular text-muted-foreground mb-4">{siteConfig.address}</p>
+          
+          <div className="text-sm text-muted-foreground space-y-1">
+            <p className="font-medium text-foreground mb-2">Hours:</p>
+            {siteConfig.hours.map((schedule) => (
+              <div key={schedule.day} className="flex justify-center gap-4">
+                <span className="w-24 text-right">{schedule.day}</span>
+                <span className={`w-20 text-left ${schedule.time === "Closed" ? "text-muted-foreground" : ""}`}>
+                  {schedule.time}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="flex items-center justify-center gap-4 mb-12">
           <a
-            href={siteConfig.links.instagram}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={siteConfig.links.instagramApp}
+            onClick={(e) => {
+              // Try to open app first, fall back to web
+              window.location.href = siteConfig.links.instagramApp;
+              setTimeout(() => {
+                window.open(siteConfig.links.instagram, "_blank");
+              }, 500);
+              e.preventDefault();
+            }}
             className="p-4 border-[3px] border-white outline outline-[3px] outline-offset-2 outline-orange hover:bg-white hover:text-background transition-all duration-300"
             aria-label="Instagram"
           >
             <Instagram className="w-6 h-6" strokeWidth={1.5} />
           </a>
           <a
-            href={siteConfig.links.tiktok}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={siteConfig.links.tiktokApp}
+            onClick={(e) => {
+              // Try to open app first, fall back to web
+              window.location.href = siteConfig.links.tiktokApp;
+              setTimeout(() => {
+                window.open(siteConfig.links.tiktok, "_blank");
+              }, 500);
+              e.preventDefault();
+            }}
             className="p-4 border-[3px] border-white outline outline-[3px] outline-offset-2 outline-orange hover:bg-white hover:text-background transition-all duration-300"
             aria-label="TikTok"
           >
