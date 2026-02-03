@@ -1,22 +1,19 @@
 import { Instagram, ChevronDown } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
+import { siteConfig } from "@/config/site";
 
 const Navbar = () => {
   const [moreOpen, setMoreOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     setMoreOpen(false);
   };
 
-  // Close dropdown when clicking outside
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
         setMoreOpen(false);
       }
     };
@@ -24,124 +21,72 @@ const Navbar = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  const NavLinks = ({ mobile = false }: { mobile?: boolean }) => (
+    <>
+      {siteConfig.nav.main.map((item) => (
+        <button
+          key={item.section}
+          onClick={() => scrollToSection(item.section)}
+          className="label-small link-hover"
+        >
+          {item.label}
+        </button>
+      ))}
+      <div className="relative" ref={dropdownRef}>
+        <button
+          onClick={() => setMoreOpen(!moreOpen)}
+          className="label-small link-hover flex items-center gap-1"
+        >
+          More
+          <ChevronDown 
+            className={`w-4 h-4 transition-transform duration-200 ${moreOpen ? 'rotate-180' : ''}`} 
+            strokeWidth={1.5} 
+          />
+        </button>
+        {moreOpen && (
+          <div className={`absolute top-full mt-2 min-w-[160px] bg-background border border-border shadow-lg ${mobile ? 'left-1/2 -translate-x-1/2' : 'right-0'}`}>
+            {siteConfig.nav.more.map((item, i) => (
+              <button
+                key={item.section}
+                onClick={() => scrollToSection(item.section)}
+                className={`w-full text-left px-4 py-3 label-small hover:bg-muted transition-colors ${i < siteConfig.nav.more.length - 1 ? 'border-b border-border' : ''}`}
+              >
+                {item.label}
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+    </>
+  );
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-6 py-4">
-        {/* Top row: Logo and Social Icons */}
         <div className="flex items-center justify-between">
-          {/* Logo */}
           <button
             onClick={() => scrollToSection("hero")}
             className="text-lg font-semibold tracking-[0.2em] hover:opacity-70 transition-opacity"
           >
-            LOOM DELI
+            {siteConfig.name}
           </button>
 
-          {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center gap-8">
-            <button
-              onClick={() => scrollToSection("menu")}
-              className="label-small link-hover"
-            >
-              Menu
-            </button>
-            <button
-              onClick={() => scrollToSection("location")}
-              className="label-small link-hover"
-            >
-              Find Us
-            </button>
-            
-            {/* More Dropdown */}
-            <div className="relative" ref={dropdownRef}>
-              <button
-                onClick={() => setMoreOpen(!moreOpen)}
-                className="label-small link-hover flex items-center gap-1"
-              >
-                More
-                <ChevronDown 
-                  className={`w-4 h-4 transition-transform duration-200 ${moreOpen ? 'rotate-180' : ''}`} 
-                  strokeWidth={1.5} 
-                />
-              </button>
-              
-              {moreOpen && (
-                <div className="absolute top-full right-0 mt-2 min-w-[160px] bg-background border border-border shadow-lg">
-                  <button
-                    onClick={() => scrollToSection("atmosphere")}
-                    className="w-full text-left px-4 py-3 label-small hover:bg-muted transition-colors border-b border-border"
-                  >
-                    About Us
-                  </button>
-                  <button
-                    onClick={() => scrollToSection("catering")}
-                    className="w-full text-left px-4 py-3 label-small hover:bg-muted transition-colors"
-                  >
-                    Catering
-                  </button>
-                </div>
-              )}
-            </div>
+            <NavLinks />
           </div>
 
-          {/* Social Icons */}
-          <div className="flex items-center gap-4">
-            <a
-              href="https://www.instagram.com/jims_delhi_club/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-            >
-              <Instagram className="social-icon" />
-            </a>
-          </div>
+          <a
+            href={siteConfig.links.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <Instagram className="social-icon" />
+          </a>
         </div>
 
-        {/* Mobile Navigation Links - Second Row */}
         <div className="flex md:hidden items-center justify-center gap-6 mt-3 pt-3 border-t border-border">
-          <button
-            onClick={() => scrollToSection("menu")}
-            className="label-small link-hover"
-          >
-            Menu
-          </button>
-          <button
-            onClick={() => scrollToSection("location")}
-            className="label-small link-hover"
-          >
-            Find Us
-          </button>
-          
-          {/* Mobile More Dropdown */}
-          <div className="relative" ref={dropdownRef}>
-            <button
-              onClick={() => setMoreOpen(!moreOpen)}
-              className="label-small link-hover flex items-center gap-1"
-            >
-              More
-              <ChevronDown 
-                className={`w-4 h-4 transition-transform duration-200 ${moreOpen ? 'rotate-180' : ''}`} 
-                strokeWidth={1.5} 
-              />
-            </button>
-            
-            {moreOpen && (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 min-w-[160px] bg-background border border-border shadow-lg">
-                <button
-                  onClick={() => scrollToSection("atmosphere")}
-                  className="w-full text-left px-4 py-3 label-small hover:bg-muted transition-colors border-b border-border"
-                >
-                  About Us
-                </button>
-                <button
-                  onClick={() => scrollToSection("catering")}
-                  className="w-full text-left px-4 py-3 label-small hover:bg-muted transition-colors"
-                >
-                  Catering
-                </button>
-              </div>
-            )}
-          </div>
+          <NavLinks mobile />
         </div>
       </div>
     </nav>
