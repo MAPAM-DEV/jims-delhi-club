@@ -1,5 +1,5 @@
 import { useState } from "react";
-import menuJanuary from "@/assets/menu-january-2026.png";
+import menuFebruary from "@/assets/menu-february-2026.png";
 import ImageLightbox from "./ImageLightbox";
 import { siteConfig } from "@/config/site";
 import DecorativeDivider from "./DecorativeDivider";
@@ -32,7 +32,7 @@ const MenuSection = () => {
             className="w-full border-[3px] border-white outline outline-[3px] outline-offset-2 outline-orange bg-white/10 p-6 md:p-8 cursor-pointer hover:bg-white/20 transition-colors group"
           >
             <img
-              src={menuJanuary}
+              src={menuFebruary}
               alt={`${siteConfig.name} ${siteConfig.currentMenu.month} menu`}
               className="w-full h-auto group-hover:opacity-90 transition-opacity"
             />
@@ -46,7 +46,7 @@ const MenuSection = () => {
       </div>
 
       <ImageLightbox
-        src={menuJanuary}
+        src={menuFebruary}
         alt={`${siteConfig.name} ${siteConfig.currentMenu.month} menu`}
         isOpen={lightboxOpen}
         onClose={() => setLightboxOpen(false)}

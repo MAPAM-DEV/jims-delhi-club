@@ -54,6 +54,6 @@ export const siteConfig = {
   
   // Current menu
   currentMenu: {
-    month: "January 2026",
+    month: "February 2026",
   },
 } as const;
