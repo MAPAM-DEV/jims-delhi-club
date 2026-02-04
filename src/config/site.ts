@@ -3,7 +3,7 @@
 export const siteConfig = {
   // Business info
   name: "jim's delhi club",
-  tagline: "your local sandwich dealer",
+  tagline: "your local naandwich dealer",
   description: "Coffee & Deli",
   
   // Location
