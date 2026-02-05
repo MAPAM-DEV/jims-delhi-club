@@ -79,12 +79,13 @@ const ImageLightbox = ({ src, alt, isOpen, onClose }: ImageLightboxProps) => {
         className="max-w-[90vw] max-h-[90vh] overflow-auto"
         onClick={(e) => e.stopPropagation()}
       >
-        <img
-          src={src}
-          alt={alt}
-          className="transition-transform duration-200"
-          style={{ transform: `scale(${zoom})`, transformOrigin: "center" }}
-        />
+        <div style={{ width: `${zoom * 100}%`, height: `${zoom * 100}%` }}>
+          <img
+            src={src}
+            alt={alt}
+            className="transition-all duration-200 w-full h-full object-contain"
+          />
+        </div>
       </div>
     </div>
   );
