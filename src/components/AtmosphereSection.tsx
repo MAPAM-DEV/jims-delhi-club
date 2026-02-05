@@ -10,9 +10,9 @@ const AtmosphereSection = () => (
         <DecorativeDivider className="mb-6" />
         <h2 className="heading-section text-white mb-8" style={{ WebkitTextStroke: '2px hsl(39 90% 48%)' }}>About Us</h2>
         <p className="body-regular text-white/70 max-w-lg mx-auto">
-          Serving quality coffee and fresh deli food from a beautifully restored 
-          historic building in the heart of Dundee. Every cup crafted with care, 
-          every bite made fresh.
+          We express our love for food and cooking by serving quality fresh delhi meals
+          in a friendly, inviting environment. Take Your food to go or stay for a chat;
+          regardless, You'll be leaving with good food <strong>and</strong> mood.
         </p>
       </div>
 
